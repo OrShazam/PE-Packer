@@ -3,6 +3,7 @@
 ![C](docs/badges/C-11-brightgreen.svg)
 ![ASM](docs/badges/Microsoft-ASM-brightgreen.svg)
 [![License](docs/badges/License-GPL-3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![DOI](https://zenodo.org/badge/231357933.svg)](https://zenodo.org/badge/latestdoi/231357933)
 
 ## Languages
 
