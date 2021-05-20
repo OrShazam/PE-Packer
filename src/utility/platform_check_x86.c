@@ -6,7 +6,7 @@
  * @version 1.0
  * @date 2020-01-14
  * @par GitHub
- * https://github.com/czs108/
+ * https://github.com/czs108
  * 
  * @note This implementation is for x86 platforms.
  */

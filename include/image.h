@@ -6,7 +6,7 @@
  * @version 1.0
  * @date 2020-01-07
  * @par GitHub
- * https://github.com/czs108/
+ * https://github.com/czs108
  */
 
 #pragma once
@@ -20,7 +20,7 @@
 /**
  * @brief Store PE image information, most methods are based on this structure.
  * 
- * @see https://docs.microsoft.com/en-us/windows/win32/debug/pe-format/
+ * @see https://docs.microsoft.com/en-us/windows/win32/debug/pe-format
  */
 typedef struct _PE_IMAGE_INFO
 {

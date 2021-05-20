@@ -1,8 +1,10 @@
 # PE-Packer
 
-![C](docs/badges/C-11-brightgreen.svg)
-![ASM](docs/badges/Microsoft-ASM-brightgreen.svg)
-[![License](docs/badges/License-GPL-3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+![C](docs/badges/C-17.svg)
+![MASM](docs/badges/MASM-8.svg)
+[![CMake](docs/badges/Made-with-CMake.svg)](https://cmake.org)
+[![Windows](docs/badges/Microsoft-Windows.svg)](https://www.microsoft.com/en-ie/windows)
+[![License](docs/badges/License-GPL-3.0.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![DOI](https://zenodo.org/badge/231357933.svg)](https://zenodo.org/badge/latestdoi/231357933)
 
 ## 翻译
@@ -29,7 +31,7 @@
 - 初始化导入表。
 - 重定位。
 
-PE文件加壳前，使用一些反汇编工具可以自动分析其汇编代码及数据，例如[*IDA Pro*](https://www.hex-rays.com/products/ida/)。
+PE文件加壳前，使用一些反汇编工具可以自动分析其汇编代码及数据，例如[*IDA Pro*](https://www.hex-rays.com/products/ida)。
 
 - 反汇编代码。
 
@@ -67,43 +69,43 @@ PE文件加壳前，使用一些反汇编工具可以自动分析其汇编代码
 
 该项目必须编译为**Windows 32位**版本，目前也只支持针对**32位**`.exe`文件的加壳处理。
 
-- 安装[*MASM32*](http://www.masm32.com/)。
-- 安装[*MinGW-w64*](https://www.mingw-w64.org/)，选择`i686`架构。
-- 安装[*CMake*](https://cmake.org/)。
+- 安装[*MASM32*](http://www.masm32.com)。
+- 安装[*MinGW-w64*](https://www.mingw-w64.org)，选择`i686`架构。
+- 安装[*CMake*](https://cmake.org)。
 - 配置这三个工具的`PATH`环境变量。
 
 ### 构建
 
-```console
-> mkdir -p build
-> cd build
-> cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
-> cmake --build .
+```bash
+mkdir -p build
+cd build
+cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
+cmake --build .
 ```
 
 或直接执行`build.ps1`文件:
 
 ```console
-> .\build.ps1
+PS> .\build.ps1
 ```
 
 ## 使用
 
 对可执行文件加壳时，需要指定其*输入路径*和*输出路径*。
 
-```bash
+```console
 PE-Packer <input-file> <output-file>
 ```
 
 例如：
 
-```bash
+```console
 PE-Packer hello.exe hello-pack.exe
 ```
 
 ## 文档
 
-可以使用[*Doxygen*](http://www.doxygen.nl/)生成项目文档。
+可以使用[*Doxygen*](http://www.doxygen.nl)生成项目文档。
 
 为了避免扫描`.md`文件，必须将`*.md`添加至`EXCLUDE_PATTERNS`配置选项。
 
@@ -115,9 +117,9 @@ EXCLUDE_PATTERNS = *.md
 
 ## 参考
 
-[*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212/)
+[*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212)
 
-[*PE Format - Windows Dev Center*](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format/)
+[*PE Format - Windows Dev Center*](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format)
 
 ## 许可证
 
@@ -125,7 +127,7 @@ EXCLUDE_PATTERNS = *.md
 
 ## 作者
 
-***GitHub***：https://github.com/czs108/
+***GitHub***：https://github.com/czs108
 
 ***E-Mail***：chenzs108@outlook.com
 

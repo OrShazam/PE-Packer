@@ -6,7 +6,7 @@
  * @version 1.0
  * @date 2020-01-10
  * @par GitHub
- * https://github.com/czs108/
+ * https://github.com/czs108
  */
 
 #pragma once

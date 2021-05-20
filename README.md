@@ -1,8 +1,10 @@
 # PE-Packer
 
-![C](docs/badges/C-11-brightgreen.svg)
-![ASM](docs/badges/Microsoft-ASM-brightgreen.svg)
-[![License](docs/badges/License-GPL-3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+![C](docs/badges/C-17.svg)
+![MASM](docs/badges/MASM-8.svg)
+[![CMake](docs/badges/Made-with-CMake.svg)](https://cmake.org)
+[![Windows](docs/badges/Microsoft-Windows.svg)](https://www.microsoft.com/en-ie/windows)
+[![License](docs/badges/License-GPL-3.0.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![DOI](https://zenodo.org/badge/231357933.svg)](https://zenodo.org/badge/latestdoi/231357933)
 
 ## Languages
@@ -29,7 +31,7 @@ When running a packed PE file, the *shell-entry* will decrypt and load the origi
 - Initializing the original import table.
 - Relocation.
 
-Before packing, using some disassembly tools can disassemble the executable file to analyze the code, such as [*IDA Pro*](https://www.hex-rays.com/products/ida/).
+Before packing, using some disassembly tools can disassemble the executable file to analyze the code, such as [*IDA Pro*](https://www.hex-rays.com/products/ida).
 
 - Disassembling the code.
 
@@ -67,43 +69,43 @@ After packing, the reverse analysis will be obstructed.
 
 The project must configure on/for **Windows 32-bit** and can only process **32-bit** `.exe` programs now.
 
-- Install [*MASM32*](http://www.masm32.com/).
-- Install [*MinGW-w64*](https://www.mingw-w64.org/), select `i686` architecture.
-- Install [*CMake*](https://cmake.org/).
+- Install [*MASM32*](http://www.masm32.com).
+- Install [*MinGW-w64*](https://www.mingw-w64.org), select `i686` architecture.
+- Install [*CMake*](https://cmake.org).
 - Set the `PATH` environment variables of these three tools.
 
 ### Building
 
-```console
-> mkdir -p build
-> cd build
-> cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
-> cmake --build .
+```bash
+mkdir -p build
+cd build
+cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
+cmake --build .
 ```
 
 Or run the `build.ps1` file directly:
 
 ```console
-> .\build.ps1
+PS> .\build.ps1
 ```
 
 ## Usage
 
 To pack a program, you must specify its *input name* and the *output name*.
 
-```bash
+```console
 PE-Packer <input-file> <output-file>
 ```
 
 For example:
 
-```bash
+```console
 PE-Packer hello.exe hello-pack.exe
 ```
 
 ## Documents
 
-You can use [*Doxygen*](http://www.doxygen.nl/) to generate the document.
+You can use [*Doxygen*](http://www.doxygen.nl) to generate the document.
 
 In order to avoid scanning `.md` files, you must add `*.md` to the `EXCLUDE_PATTERNS` configuration option.
 
@@ -115,17 +117,17 @@ This option is in "***Expert***" -> "***Input***" page.
 
 ## References
 
-[*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212/)
+[*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212)
 
-[*PE Format - Windows Dev Center*](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format/)
+[*PE Format - Windows Dev Center*](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format)
 
 ## License
 
-Distributed under the *GNU General Public* License. See `LICENSE` for more information.
+Distributed under the *GNU General Public License*. See `LICENSE` for more information.
 
 ## Contact
 
-***GitHub***: https://github.com/czs108/
+***GitHub***: https://github.com/czs108
 
 ***E-Mail***: chenzs108@outlook.com
 

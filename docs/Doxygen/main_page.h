@@ -6,7 +6,7 @@
  * @version 1.0
  * @date 2020-01-20
  * @par GitHub
- * https://github.com/czs108/
+ * https://github.com/czs108
  */
 
 /**
@@ -39,43 +39,43 @@
  * 
  * The project must configure on/for **Windows 32-bit** and can only process **32-bit** `.exe` programs now.
  * 
- * - Install [*MASM32*](http://www.masm32.com/).
- * - Install [*MinGW-w64*](https://www.mingw-w64.org/), select `i686` architecture.
- * - Install [*CMake*](https://cmake.org/).
+ * - Install [*MASM32*](http://www.masm32.com).
+ * - Install [*MinGW-w64*](https://www.mingw-w64.org), select `i686` architecture.
+ * - Install [*CMake*](https://cmake.org).
  * - Set the `PATH` environment variables of these three tools.
  * 
  * @subsection building Building
  * 
- * ```powershell
- * > mkdir -p build
- * > cd build
- * > cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
- * > cmake --build .
+ * ```bash
+ * mkdir -p build
+ * cd build
+ * cmake .. -D CMAKE_C_COMPILER=gcc -G "MinGW Makefiles"
+ * cmake --build .
  * ```
  * 
  * Or run the `build.ps1` file directly:
  * 
- * ```powershell
- * > .\build.ps1
+ * ```console
+ * PS> .\build.ps1
  * ```
  * 
  * @section usage Usage
  * 
  * To pack a program, you must specify its *input name* and the *output name*.
  * 
- * ```powershell
+ * ```console
  * PE-Packer <input-file> <output-file>
  * ```
  * 
  * For example:
  * 
- * ```powershell
+ * ```console
  * PE-Packer hello.exe hello-pack.exe
  * ```
  * 
  * @section documents Documents
  * 
- * You can use [*Doxygen*](http://www.doxygen.nl/) to generate the document.
+ * You can use [*Doxygen*](http://www.doxygen.nl) to generate the document.
  * 
  * In order to avoid scanning `.md` files, you must add `*.md` to the `EXCLUDE_PATTERNS` configuration option.
  * 
@@ -87,17 +87,17 @@
  * 
  * @section references References
  * 
- * [*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212/)
+ * [*《加密与解密（第3版）》段钢*](https://book.douban.com/subject/3091212)
  * 
- * [PE Format - Windows Dev Center](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format/)
+ * [PE Format - Windows Dev Center](https://docs.microsoft.com/en-us/windows/win32/debug/pe-format)
  * 
  * @section license License
  * 
- * Distributed under the *GNU General Public* License. See `LICENSE` for more information.
+ * Distributed under the *GNU General Public License*. See `LICENSE` for more information.
  * 
  * @section contact Contact
  * 
- * ***GitHub***: https://github.com/czs108/
+ * ***GitHub***: https://github.com/czs108
  * 
  * ***E-Mail***: chenzs108@outlook.com
  * 
