@@ -22,19 +22,18 @@
  * 
  * @see https://docs.microsoft.com/en-us/windows/win32/debug/pe-format
  */
-typedef struct _PE_IMAGE_INFO
-{
+typedef struct _PE_IMAGE_INFO {
     //! The size of the PE image.
     DWORD image_size;
 
     //! The base address of the PE image when it is loaded in memory.
-    BYTE *image_base;
+    BYTE* image_base;
 
     //! The base address of the @em IMAGE_NT_HEADERS structure.
-    IMAGE_NT_HEADERS *nt_header;
+    IMAGE_NT_HEADERS* nt_header;
 
     //! The base address of the first @em IMAGE_SECTION_HEADER structure.
-    IMAGE_SECTION_HEADER *section_header;
+    IMAGE_SECTION_HEADER* section_header;
 
     //! The thread-local storage table.
     IMAGE_TLS_DIRECTORY tls_table;
@@ -57,11 +56,9 @@ typedef struct _PE_IMAGE_INFO
  * @note The constructor of @em _PE_IMAGE_INFO structure.
  * @note The constructor of @em _EXTRA_DATA_VIEW structure.
  */
-bool LoadPeImage(
-    const BYTE *const file_base,
-    const DWORD file_size,
-    PE_IMAGE_INFO *const image_info,
-    EXTRA_DATA_VIEW *const extra_data);
+bool LoadPeImage(const BYTE* const file_base, const DWORD file_size,
+                 PE_IMAGE_INFO* const image_info,
+                 EXTRA_DATA_VIEW* const extra_data);
 
 
 /**
@@ -71,8 +68,7 @@ bool LoadPeImage(
  * 
  * @note The destructor of @em _PE_IMAGE_INFO structure.
  */
-void FreePeImage(
-    const PE_IMAGE_INFO *const image_info);
+void FreePeImage(const PE_IMAGE_INFO* const image_info);
 
 
 /**
@@ -82,9 +78,7 @@ void FreePeImage(
  * @param file          The file.
  * @return @em true if the method succeeded, otherwise @em false.
  */
-bool WriteImageToFile(
-    const PE_IMAGE_INFO *const image_info,
-    const HANDLE file);
+bool WriteImageToFile(const PE_IMAGE_INFO* const image_info, const HANDLE file);
 
 
 /**
@@ -94,9 +88,7 @@ bool WriteImageToFile(
  * @param rva           A relative virtual address.
  * @return The virtual address.
  */
-BYTE *RvaToVa(
-    const PE_IMAGE_INFO *const image_info,
-    const DWORD rva);
+BYTE* RvaToVa(const PE_IMAGE_INFO* const image_info, const DWORD rva);
 
 
 /**
@@ -105,8 +97,7 @@ BYTE *RvaToVa(
  * @param image_info    The PE image.
  * @return @em true if the image is a x64 file, otherwise @em false.
  */
-bool IsPe64(
-    const PE_IMAGE_INFO *const image_info);
+bool IsPe64(const PE_IMAGE_INFO* const image_info);
 
 
 /**
@@ -116,9 +107,7 @@ bool IsPe64(
  * @param align     A value of alignment.
  * @return The value after alignment.
  */
-DWORD Align(
-    const DWORD value,
-    const DWORD align);
+DWORD Align(const DWORD value, const DWORD align);
 
 
 /**
@@ -127,8 +116,7 @@ DWORD Align(
  * @param file_base The base address of the file content.
  * @return @em true if the file is a PE file, otherwise @em false.
  */
-bool IsPeFile(
-    const BYTE *const file_base);
+bool IsPeFile(const BYTE* const file_base);
 
 
 /**
@@ -141,7 +129,5 @@ bool IsPeFile(
  * @param[out] nt_header_size   The size of the @em IMAGE_NT_HEADERS structure. It's optional.
  * @return The size of PE headers.
  */
-DWORD CalcHeadersSize(
-    const BYTE *const file_base,
-    DWORD *const dos_header_size,
-    DWORD *const nt_header_size);
+DWORD CalcHeadersSize(const BYTE* const file_base, DWORD* const dos_header_size,
+                      DWORD* const nt_header_size);

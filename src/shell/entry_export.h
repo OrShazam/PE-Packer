@@ -27,8 +27,7 @@
 /**
  * @brief The encryption information of a segment of the shell.
  */
-typedef struct _SEG_ENCRY_INFO
-{
+typedef struct _SEG_ENCRY_INFO {
     //! The offset, relative to the shell.
     DWORD seg_offset;
 
@@ -41,8 +40,7 @@ typedef struct _SEG_ENCRY_INFO
 /**
  * @brief The original PE information.
  */
-typedef struct _ORIGIN_PE_INFO
-{
+typedef struct _ORIGIN_PE_INFO {
     //! The offset, relative to the shell.
     DWORD entry_point;
 
@@ -53,7 +51,7 @@ typedef struct _ORIGIN_PE_INFO
     DWORD reloc_table_rva;
 
     //! The image base.
-    VOID *image_base;
+    VOID* image_base;
 
     //! The encryption information of sections, up to 0x40 sections and a blank structure.
     ENCRY_INFO section_encry_info[MAX_ENCRY_SECTION_COUNT + 1];

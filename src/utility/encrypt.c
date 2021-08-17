@@ -14,19 +14,14 @@
 #include <assert.h>
 
 
-void EncryptData(
-    BYTE *const base,
-    const DWORD size)
-{
-    if (size == 0)
-    {
+void EncryptData(BYTE* const base, const DWORD size) {
+    if (size == 0) {
         return;
     }
 
     assert(base != NULL);
 
-    for (DWORD i = 0; i != size; ++i)
-    {
+    for (DWORD i = 0; i != size; ++i) {
         base[i] += 0xCC;
     }
 }

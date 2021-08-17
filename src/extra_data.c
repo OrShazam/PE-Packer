@@ -15,21 +15,16 @@
 #include <assert.h>
 
 
-bool WriteExtraDataToFile(
-    const EXTRA_DATA_VIEW *const data,
-    const HANDLE file)
-{
+bool WriteExtraDataToFile(const EXTRA_DATA_VIEW* const data,
+                          const HANDLE file) {
     assert(data != NULL);
     assert(file != INVALID_HANDLE_VALUE);
 
-    if (data->size > 0)
-    {
+    if (data->size > 0) {
         assert(data->base != NULL);
 
         return WriteAllToFile(file, data->base, data->size);
-    }
-    else
-    {
+    } else {
         return true;
     }
 }

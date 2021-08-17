@@ -20,8 +20,7 @@
  * 
  * @see LoadPeImage()
  */
-typedef struct _EXTRA_DATA_VIEW
-{
+typedef struct _EXTRA_DATA_VIEW {
     //! The base address of the data.
     const BYTE* base;
 
@@ -38,6 +37,4 @@ typedef struct _EXTRA_DATA_VIEW
  * @param file  The file.
  * @return @em true if the method succeeds, otherwise @em false.
  */
-bool WriteExtraDataToFile(
-    const EXTRA_DATA_VIEW *const data,
-    const HANDLE file);
+bool WriteExtraDataToFile(const EXTRA_DATA_VIEW* const data, const HANDLE file);

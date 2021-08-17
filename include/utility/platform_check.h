@@ -23,5 +23,4 @@
  * @param image_info    The PE image.
  * @return @em true if the PE image matches the program platform, otherwise @em false.
  */
-bool IsPeMatchPlatform(
-    const PE_IMAGE_INFO *const image_info);
+bool IsPeMatchPlatform(const PE_IMAGE_INFO* const image_info);

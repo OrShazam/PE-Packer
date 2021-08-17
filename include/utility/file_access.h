@@ -18,8 +18,7 @@
 /**
  * @brief The view of a file.
  */
-typedef struct _FILE_VIEW
-{
+typedef struct _FILE_VIEW {
     //! The file-mapping returned by @em CreateFileMapping API.
     HANDLE map;
 
@@ -40,10 +39,8 @@ typedef struct _FILE_VIEW
  * @param size  The size of the data.
  * @return @em true if the method succeeds, otherwise @em false.
  */
-bool WriteAllToFile(
-    const HANDLE file,
-    const BYTE *const data,
-    const DWORD size);
+bool WriteAllToFile(const HANDLE file, const BYTE* const data,
+                    const DWORD size);
 
 
 /**
@@ -55,9 +52,7 @@ bool WriteAllToFile(
  * 
  * @note The constructor of @em _FILE_VIEW structure.
  */
-bool OpenReadViewOfFile(
-    const HANDLE file,
-    FILE_VIEW *const file_view);
+bool OpenReadViewOfFile(const HANDLE file, FILE_VIEW* const file_view);
 
 
 /**
@@ -67,8 +62,7 @@ bool OpenReadViewOfFile(
  * 
  * @note The destructor of @em _FILE_VIEW structure.
  */
-void CloseViewOfFile(
-    const FILE_VIEW *const file_view);
+void CloseViewOfFile(const FILE_VIEW* const file_view);
 
 
 /**
@@ -79,5 +73,4 @@ void CloseViewOfFile(
  * 
  * @warning The program can only process files smaller than 2GB.
  */
-bool IsFileSmallerThan2G(
-    const HANDLE file);
+bool IsFileSmallerThan2G(const HANDLE file);

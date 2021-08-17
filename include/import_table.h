@@ -25,8 +25,7 @@
  * @param image_info    The PE image.
  * @return The required size.
  */
-DWORD CalcNewImpTableSize(
-    const PE_IMAGE_INFO *const image_info);
+DWORD CalcNewImpTableSize(const PE_IMAGE_INFO* const image_info);
 
 
 /**
@@ -42,9 +41,8 @@ DWORD CalcNewImpTableSize(
  * 
  * @see @ref new-import-table
  */
-DWORD TransformImpTable(
-    const PE_IMAGE_INFO *const image_info,
-    BYTE *const new_table);
+DWORD TransformImpTable(const PE_IMAGE_INFO* const image_info,
+                        BYTE* const new_table);
 
 
 /**
@@ -52,5 +50,4 @@ DWORD TransformImpTable(
  * 
  * @param image_info    The PE image.
  */
-void ClearImpTable(
-    const PE_IMAGE_INFO *const image_info);
+void ClearImpTable(const PE_IMAGE_INFO* const image_info);

@@ -16,9 +16,7 @@
 #include <assert.h>
 
 
-bool IsPeMatchPlatform(
-    const PE_IMAGE_INFO *const image_info)
-{
+bool IsPeMatchPlatform(const PE_IMAGE_INFO* const image_info) {
     assert(image_info != NULL);
 
     return IsPe64(image_info) != true;

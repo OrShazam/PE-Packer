@@ -49,8 +49,7 @@ void ResetLastErrorCode();
  * 
  * @warning The reture value must be free by @em FreeErrorMessage() method if it is not @em NULL.
  */
-TCHAR *FormatErrorMessage(
-    const DWORD error_code);
+TCHAR* FormatErrorMessage(const DWORD error_code);
 
 
 /**
@@ -58,5 +57,4 @@ TCHAR *FormatErrorMessage(
  * 
  * @param message   A message got from @em FormatErrorMessage() method.
  */
-void FreeErrorMessage(
-    TCHAR *const message);
+void FreeErrorMessage(TCHAR* const message);
