@@ -125,6 +125,21 @@ This option is in "***Expert***" -> "***Input***" page.
 
 Distributed under the *GNU General Public License*. See `LICENSE` for more information.
 
+## Citing
+
+```tex
+@software{chenzs108_2021_4698355,
+  author       = {Chen Zhenshuo},
+  title        = {czs108/PE-Packer: v1.0.0-beta},
+  month        = apr,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v1.0.0-beta},
+  doi          = {10.5281/zenodo.4698355},
+  url          = {https://doi.org/10.5281/zenodo.4698355}
+}
+```
+
 ## Contact
 
 ***GitHub***: https://github.com/czs108
