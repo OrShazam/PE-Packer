@@ -523,7 +523,7 @@ _ret_oep:
         push    module
         call    GetSectionHeader
         ; `ecx` is the number of sections.
-        ; `edx` is base address of the `IMAGE_SECTION_HEADER` array.
+        ; `eax` is base address of the `IMAGE_SECTION_HEADER` array.
         mov     ebx, eax
         assume  ebx: ptr IMAGE_SECTION_HEADER
         mov     esi, new_protect
